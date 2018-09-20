@@ -1,0 +1,17 @@
+
+import java.util.HashMap;
+dialect "mvel"
+
+rule "run"
+    when
+        $map:HashMap(name=="1")
+    then
+        $map.put("message","name is 1")
+end
+
+rule "xx"
+    when
+        $map:HashMap(name=="2")
+    then
+        $map.put("error","name is 1")
+end
